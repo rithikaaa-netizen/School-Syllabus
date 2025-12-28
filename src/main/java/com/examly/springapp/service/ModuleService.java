@@ -1,5 +1,5 @@
 package com.examly.springapp.service;
 
-public class ModuleService {
-    
+public interface ModuleService {
+
 }

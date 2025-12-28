@@ -39,7 +39,7 @@ public class InstructorService {
         }
     }
 
-    public ResponseEntity<Instructor> getInstructorById(int id) {
+    public ResponseEntity<Instructor> getInstructorById(long id) {
         try {
             Instructor instructor = repo.findById(id).orElse(null);
             if (instructor == null) {
@@ -61,7 +61,7 @@ public class InstructorService {
         }
     }
 
-    public ResponseEntity<Void> deleteInstructor(int id) {
+    public ResponseEntity<Void> deleteInstructor(long id) {
         try {
             repo.deleteById(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
